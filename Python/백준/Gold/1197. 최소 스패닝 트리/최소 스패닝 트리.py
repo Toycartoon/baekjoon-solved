@@ -1,11 +1,15 @@
+import sys
 import heapq
 
+
+input = sys.stdin.readline
 
 v, e = map(int, input().split())
 
 q = []
 arr = [-1] * (v + 1)
 w = 0
+
 
 def find(i):
     trace = []
