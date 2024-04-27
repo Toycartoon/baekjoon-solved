@@ -1,0 +1,1 @@
+print("cute") if input().endswith("driip") else print("not cute")
