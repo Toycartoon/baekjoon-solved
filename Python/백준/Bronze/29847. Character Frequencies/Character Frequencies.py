@@ -10,5 +10,5 @@ for _ in range(n):
         except KeyError:
             s[i] = 1
 
-for i in sorted(s.keys()):
+for i in s.keys():
     print(i, s[i])
