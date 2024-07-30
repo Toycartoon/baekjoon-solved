@@ -1,8 +1,11 @@
 n, m, k = map(int, input().split())
-w = []
+s = []
 for i in range(n):
-    w.append(input())
+    s.append(sorted([*input()]))
 
-w.sort()
-a = list("".join(w[:k]))
-print("".join(sorted(a)))
+s.sort()
+ans = []
+for i in s[:k]:
+    ans.extend([*i])
+
+print("".join(sorted(ans)))
