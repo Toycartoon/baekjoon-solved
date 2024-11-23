@@ -1,0 +1,1 @@
+print("AKAR"*int(input())+"AKA")
