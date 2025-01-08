@@ -20,7 +20,7 @@
 
 <p> </p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/ca30bf59-2a40-4eff-909f-532bc9df8840/-/preview/"></p>
+<p style="text-align: center;"><img alt="" src=""></p>
 
 <p> </p>
 
