@@ -3,12 +3,12 @@
 using namespace std;
 
 
-int oper(int a, int b) {
+long long int oper(long long int a, long long int b) {
 	return (a + b) * (a - b);
 }
 
 int main() {
-	int a, b;
+	long long int a, b;
 
 	cin >> a >> b;
 	cout << oper(a, b) << endl;
