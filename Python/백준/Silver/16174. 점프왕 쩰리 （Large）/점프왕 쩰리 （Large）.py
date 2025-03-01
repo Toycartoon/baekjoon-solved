@@ -6,7 +6,7 @@ visited = [[False] * n for _ in range(n)]
 
 q = deque()
 def bfs(_x, _y):
-    pos = [(1, 0), (0, -1), (-1, 0), (0, 1)]
+    pos = [(1, 0), (0, 1)]
     visited[_y][_x] = True
     q.append((_x, _y))
 
