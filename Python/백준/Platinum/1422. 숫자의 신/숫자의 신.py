@@ -18,8 +18,7 @@ for i in range(n-k):
     u.append(l[-1])
 
 c = lcm(*a)
-for i in range(10):
-    u = sorted(u, key=lambda x: (c * x), reverse=True)
+u = sorted(u, key=lambda x: (c * x), reverse=True)
 
 for i in u:
     print(i, end="")
