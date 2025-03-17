@@ -1,9 +1,11 @@
-s = input().split()
+s = input()
 
-for i in s:
-    if i in ["history", "social", "language", "literacy"]:
+for i in ["social", "history", "language", "literacy"]:
+    if i in s:    
         print("digital humanities")
         break
-    elif i in ["bigdata", "public", "society"]:
+
+for i in ["bigdata", "public", "society"]:
+    if i in s:
         print("public bigdata")
         break
