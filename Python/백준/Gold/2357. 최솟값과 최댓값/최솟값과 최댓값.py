@@ -19,22 +19,10 @@ def query(tree, i, j):
 
     while i <= j:
         if i % 2 == 1:
-            min_l = [tree[i][0], ans[0]]
-            max_l = [tree[i][1], ans[1]]
-
-            min_l.sort()
-            max_l.sort(reverse=True)
-
-            ans = (min_l[0], max_l[0])
+            ans = (min(tree[i][0], ans[0]), max(tree[i][1], ans[1]))
             i += 1
         if j % 2 == 0:
-            min_l = [tree[j][0], ans[0]]
-            max_l = [tree[j][1], ans[1]]
-
-            min_l.sort()
-            max_l.sort(reverse=True)
-
-            ans = (min_l[0], max_l[0])
+            ans = (min(tree[j][0], ans[0]), max(tree[j][1], ans[1]))
             j -= 1
 
         i //= 2
@@ -45,13 +33,7 @@ def query(tree, i, j):
 
 n = len(tree) // 2
 for i in range(n-1, 0, -1):
-    min_l = [tree[i * 2][0], tree[i * 2 + 1][0]]
-    max_l = [tree[i * 2][1], tree[i * 2 + 1][1]]
-
-    min_l.sort()
-    max_l.sort(reverse=True)
-
-    tree[i] = (min_l[0], max_l[0])
+    tree[i] = (min(tree[i * 2][0], tree[i * 2 + 1][0]), max(tree[i * 2][1], tree[i * 2 + 1][1]))
 
 
 for i in range(m):
