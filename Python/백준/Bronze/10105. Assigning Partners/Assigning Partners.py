@@ -3,7 +3,7 @@ a = input().split()
 b = input().split()
 
 w = {}
-for i in range(len(a)):
+for i in range(n):
     w[a[i]] = b[i]
 
 f = True
