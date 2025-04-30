@@ -13,7 +13,7 @@ int main() {
         getline(cin, s);
         for (int i = 0; i < s.length(); i++) {
             if (i == 0 && 97 <= s[i] && (int)s[i] <= 122) {
-                cout << (char)((int)s[i] - 32);
+                cout << (char)(s[i] - 32);
             }
             else
                 cout << s[i];
