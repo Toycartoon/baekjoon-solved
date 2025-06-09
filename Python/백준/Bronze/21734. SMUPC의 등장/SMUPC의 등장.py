@@ -1,0 +1,1 @@
+[print(sum(map(int,[*str(ord(i))]))*i) for i in input()]
