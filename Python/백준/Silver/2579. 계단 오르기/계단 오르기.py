@@ -1,28 +1,17 @@
+import sys
+
+input = sys.stdin.readline
+
 n = int(input())
-s = [int(input()) for _ in range(n)]
+a = []
+for i in range(n):
+    a.append(int(input()))
 
-m = {(0, False): s[0], (0, True): s[0]}
+dp = [[0, 0] for _ in range(n)]
+dp[0][0] = a[0]
+dp[0][1] = a[0]
+for i in range(1, n):
+    dp[i][0] = max(dp[i-2][0], dp[i-2][1]) + a[i]
+    dp[i][1] = dp[i-1][0] + a[i]
 
-
-def c(i, st: bool):
-    if i < 0:
-        return 0
-    if (i, st) in m:
-        return m[(i, st)]
-
-    v2 = c(i - 2, False)
-    if st:
-        m[(i, st)] = v2 + s[i]
-        return m[(i, st)]
-    v1 = c(i - 1, True)
-    m[(i, st)] = max(v1, v2) + s[i]
-
-    return m[(i, st)]
-
-c(n - 1, False)
-if (n - 1, True) not in m:
-    print(m[(n - 1, False)])
-elif (n - 1, False) not in m:
-    print(m[(n - 1, True)])
-else:
-    print(max(m[(n - 1, True)], m[(n - 1, False)]))
+print(max(dp[-1]))
