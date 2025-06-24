@@ -4,7 +4,7 @@ while True:
     if m == a == b == 0:
         break
 
-    sec = round(abs((m / a) - (m / b)) * 3600)
+    sec = round(abs((m / a) - (m / b)) * 3600 + 0.005)
     min = sec // 60
     sec %= 60
     hour = min // 60
